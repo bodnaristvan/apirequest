@@ -16,6 +16,7 @@ module.exports = function(config) {
 
         // list of files / patterns to load in the browser
         files: [
+            'node_modules/babel-polyfill/dist/polyfill.js',
             'test/index.js'
         ],
 
@@ -63,8 +64,12 @@ module.exports = function(config) {
         // - Safari (only Mac; has to be installed with `npm install karma-safari-launcher`)
         // - PhantomJS
         // - IE (only Windows; has to be installed with `npm install karma-ie-launcher`)
-        browsers: ['Chrome'],
+        browsers: ['PhantomJS'],
 
+        phantomjsLauncher: {
+            // Have phantomjs exit if a ResourceError is encountered (useful if karma exits without killing phantom)
+            exitOnResourceError: true
+        },
 
         // If browser does not capture in given timeout [ms], kill it
         captureTimeout: 60000,
@@ -81,6 +86,7 @@ module.exports = function(config) {
             require("karma-jasmine"),
             require("karma-spec-reporter"),
             require("karma-chrome-launcher"),
+            require("karma-phantomjs-launcher"),
             require("babel-loader"),
             require("karma-webpack")
         ]
