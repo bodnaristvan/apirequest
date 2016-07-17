@@ -2,6 +2,7 @@
 
 A tool to help building API libraries. Apirequest allows you to create a library for accessing http services easily, in a centralized way. An API defined by apirequest will return a native Javascript Promise when called, wrapping `fetch` calls.
 
+[![Build Status](https://travis-ci.org/bodnaristvan/apirequest.svg?branch=master)](https://travis-ci.org/bodnaristvan/apirequest)
 
 ## Installation
 Get the npm module:
