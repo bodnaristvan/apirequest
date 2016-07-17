@@ -1,4 +1,2 @@
-- run test with phantomjs?
 - finish flow support
 	- with external type definition
-- travis CI integration
