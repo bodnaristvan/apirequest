@@ -5,10 +5,7 @@ import RequestParams from './requestparams';
 var createParams = (pars: Array<any>): RequestParams => new RequestParams(pars)
 var parseParams = (pars: RequestParams): RequestParams => pars.parse();
 
-var runRequest = (pars: RequestParams) => {
-	if (typeof fetch === 'undefined') {
-		return new Promise.reject('fetch not supported');
-	}
+var runRequest = (pars: RequestParams): Promise<Response> => {
 	let options = Object.assign({}, pars.options, {
 		body: pars.params,
 		json: true
