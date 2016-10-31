@@ -1,5 +1,5 @@
 // @flow
-import RequestParams from './requestparams';
+import type RequestParams from './requestparams';
 import generateApirequest from './generateapirequest';
 
 // ApiRequest type definition
