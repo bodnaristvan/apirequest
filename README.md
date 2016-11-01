@@ -177,4 +177,7 @@ TBD
 See [CONTRIBUTING](./CONTRIBUTING.md)
 
 ## Flow support
-[Flow](https://flowtype.org/) annotation is not complete yet, will be done later, providing an external type definition.
+[Flow](https://flowtype.org/) annotation is complete, external type definitions will be provided later.
+
+## Installing via Yarn
+[Yarn](https://yarnpkg.com/) is supported, the lock file is checked in.
