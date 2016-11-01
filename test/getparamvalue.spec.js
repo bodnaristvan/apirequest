@@ -5,19 +5,19 @@ describe('getparamvalue should return', () => {
 	const valueCheck = (res) => expect(res).toBe(testString);
 
 	it('with the value of the passed value', (done) => {
-		let result = getparamvalue(testString);
+		const result = getparamvalue(testString);
 		result
 			.then(valueCheck)
 			.then(done);
 	});
 	it('with the value of the passed function', (done) => {
-		let result = getparamvalue(() => { return testString });
+		const result = getparamvalue(() => { return testString; });
 		result
 			.then(valueCheck)
 			.then(done);
 	});
 	it('with the value of the passed promise', (done) => {
-		let result = getparamvalue(new Promise((resolve, reject) => resolve(testString)));
+		const result = getparamvalue(new Promise((resolve) => resolve(testString)));
 		result
 			.then(valueCheck)
 			.then(done);

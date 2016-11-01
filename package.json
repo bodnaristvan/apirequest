@@ -26,6 +26,7 @@
     "eslint-config-standard": "^6.2.1",
     "eslint-plugin-flowtype": "^2.25.0",
     "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jasmine": "^1.8.1",
     "flow-bin": "^0.33.0",
     "jasmine-core": "^2.4.1",
     "karma": "^1.1.1",
