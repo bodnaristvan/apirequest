@@ -1,6 +1,6 @@
 {
   "name": "apirequest",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "API function generator",
   "main": "dist/apirequest.js",
   "repository": "bodnaristvan/apirequest",
