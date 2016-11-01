@@ -1,6 +1,7 @@
 // @flow
-import RequestParams from './requestparams';
+/* global Response */
 import generateApirequest from './generateapirequest';
+import type RequestParams from './requestparams';
 
 // ApiRequest type definition
 type ApiRequest = {
@@ -12,8 +13,8 @@ type ApiRequest = {
 
 export default function factory(apiopts: Object = {}): ApiRequest {
 
-	let responseTransform = apiopts.responseTransformer || ((data: Promise<Response>): Promise<Response> => data);
-	let paramTransform = apiopts.paramTransformer || ((pars: RequestParams): RequestParams => pars);
+	const responseTransform = apiopts.responseTransformer || ((data: Promise<Response>): Promise<Response> => data);
+	const paramTransform = apiopts.paramTransformer || ((pars: RequestParams): RequestParams => pars);
 
 	return {
 		get: (url: string, params: Object = {}, options: Object = {}): Function =>
@@ -43,5 +44,5 @@ export default function factory(apiopts: Object = {}): ApiRequest {
 				params,
 				Object.assign({}, {method: 'DELETE'}, options),
 				paramTransform, responseTransform)
-	}
-};
+	};
+}
