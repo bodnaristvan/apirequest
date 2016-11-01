@@ -18,9 +18,9 @@ export default class RequestParams {
 		let genparams = this.params;
 		let genoptions = this.options;
 
-		let urlParams = this.url.match(/\{\{(.+?)\}\}/g);
+		const urlParams = this.url.match(/\{\{(.+?)\}\}/g);
 		if (urlParams) {
-			var paramsUsed = urlParams.map((p) => p.slice(2, -2));
+			const paramsUsed = urlParams.map((p) => p.slice(2, -2));
 			genurl = paramsUsed.reduce((url, p) => url.replace('{{' + p + '}}', this.params[p]), this.url);
 			genparams = Object.keys(this.params)
 				.filter((p) => paramsUsed.indexOf(p) === -1)
